@@ -3,12 +3,12 @@
 //  Memorize
 //
 //  Created by Bruno Nepomuceno on 30/11/21.
-//
+//  ViewModel
 
 import SwiftUI
 
-class EmojiMemoryGame {
-    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+class EmojiMemoryGame: ObservableObject {
+    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis = ["🧙🏽‍♂️","🎅🏽","🥷🏽"]
